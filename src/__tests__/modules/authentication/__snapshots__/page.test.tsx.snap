@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`page log in should render correctly 1`] = `
+<div>
+  <form
+    class="form-background max-w-full w-100 p-10 pb-8 rounded-lg shadow-xl"
+  >
+    <div
+      class="relative my-3"
+    >
+      <input
+        class="block w-full px-3 pt-5 pb-2 rounded bg-gray-50 dark:bg-gray-700 border-0 border-b-2 appearance-none border-gray-600 text-white text-sm transition duration-300 focus:border-slate-400 focus:outline-none focus:ring-0 peer"
+        id="email"
+        name="email"
+        placeholder=" "
+        type="email"
+      />
+      <label
+        class="absolute start-3 top-4 z-10 text-gray-400 text-sm duration-300 -translate-y-4 scale-75 origin-[0] peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+        for="email"
+      >
+        Email
+      </label>
+    </div>
+    <p
+      class="mt-1 mb-2 font-medium text-neon-red"
+    />
+    <div
+      class="relative my-3"
+    >
+      <input
+        class="block w-full px-3 pt-5 pb-2 rounded bg-gray-50 dark:bg-gray-700 border-0 border-b-2 appearance-none border-gray-600 text-white text-sm transition duration-300 focus:border-slate-400 focus:outline-none focus:ring-0 peer"
+        id="password"
+        name="password"
+        placeholder=" "
+        type="password"
+      />
+      <label
+        class="absolute start-3 top-4 z-10 text-gray-400 text-sm duration-300 -translate-y-4 scale-75 origin-[0] peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+        for="password"
+      >
+        Password
+      </label>
+      <span
+        class="flex justify-center items-center absolute top-0 right-0 h-full w-12 text-xl cursor-pointer transition duration-300 opacity-50 hover:opacity-100"
+      >
+        <i
+          class="icon-eye"
+        />
+      </span>
+    </div>
+    <p
+      class="mt-1 mb-2 font-medium text-neon-red"
+    />
+    <input
+      class="button w-full mt-5"
+      type="submit"
+      value="Login"
+    />
+    <p
+      class="text-center my-2"
+    >
+      --- or ---
+    </p>
+    <a
+      class="block font-medium text-center capitalize duration-300 hover:text-slate-300"
+      href="/register"
+    >
+      register
+    </a>
+  </form>
+</div>
+`;
+
+exports[`page register should render correctly 1`] = `
+<div>
+  <form
+    class="form-background max-w-full w-100 p-10 pb-8 rounded-lg shadow-xl"
+  >
+    <div
+      class="relative my-3"
+    >
+      <input
+        class="block w-full px-3 pt-5 pb-2 rounded bg-gray-50 dark:bg-gray-700 border-0 border-b-2 appearance-none border-gray-600 text-white text-sm transition duration-300 focus:border-slate-400 focus:outline-none focus:ring-0 peer"
+        id="email"
+        name="email"
+        placeholder=" "
+        type="email"
+      />
+      <label
+        class="absolute start-3 top-4 z-10 text-gray-400 text-sm duration-300 -translate-y-4 scale-75 origin-[0] peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+        for="email"
+      >
+        Email
+      </label>
+    </div>
+    <p
+      class="mt-1 mb-2 font-medium text-neon-red"
+    />
+    <div
+      class="relative my-3"
+    >
+      <input
+        class="block w-full px-3 pt-5 pb-2 rounded bg-gray-50 dark:bg-gray-700 border-0 border-b-2 appearance-none border-gray-600 text-white text-sm transition duration-300 focus:border-slate-400 focus:outline-none focus:ring-0 peer"
+        id="username"
+        name="username"
+        placeholder=" "
+        type="text"
+      />
+      <label
+        class="absolute start-3 top-4 z-10 text-gray-400 text-sm duration-300 -translate-y-4 scale-75 origin-[0] peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+        for="username"
+      >
+        Username
+      </label>
+    </div>
+    <p
+      class="mt-1 mb-2 font-medium text-neon-red"
+    />
+    <div
+      class="relative my-3"
+    >
+      <input
+        class="block w-full px-3 pt-5 pb-2 rounded bg-gray-50 dark:bg-gray-700 border-0 border-b-2 appearance-none border-gray-600 text-white text-sm transition duration-300 focus:border-slate-400 focus:outline-none focus:ring-0 peer"
+        id="password"
+        name="password"
+        placeholder=" "
+        type="password"
+      />
+      <label
+        class="absolute start-3 top-4 z-10 text-gray-400 text-sm duration-300 -translate-y-4 scale-75 origin-[0] peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+        for="password"
+      >
+        Password
+      </label>
+      <span
+        class="flex justify-center items-center absolute top-0 right-0 h-full w-12 text-xl cursor-pointer transition duration-300 opacity-50 hover:opacity-100"
+      >
+        <i
+          class="icon-eye"
+        />
+      </span>
+    </div>
+    <p
+      class="mt-1 mb-2 font-medium text-neon-red"
+    />
+    <input
+      class="button w-full mt-5"
+      type="submit"
+      value="Register"
+    />
+    <p
+      class="text-center my-2"
+    >
+      --- or ---
+    </p>
+    <a
+      class="block font-medium text-center capitalize duration-300 hover:text-slate-300"
+      href="/login"
+    >
+      login
+    </a>
+  </form>
+</div>
+`;

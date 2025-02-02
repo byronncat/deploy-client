@@ -1,0 +1,5 @@
+{
+  "entryPoints": ["../src/modules/global/index.ts"],
+  "out": "../docs",
+  "readme": "none"
+}

@@ -1,0 +1,58 @@
+@mixin box-shadow-effect-2($color)
+  box-shadow: 0 0 pxToRem(3) pxToRem(2) #fff, 0 0 pxToRem(7) #fff, 0 0 pxToRem(14) #fff, 0 0 pxToRem(20) $color, 0 0 pxToRem(50) $color, 0 0 pxToRem(60) $color, 0 0 pxToRem(150) pxToRem(30) $color, inset 0 0 pxToRem(3) pxToRem(1) #fff, inset 0 0 pxToRem(5) pxToRem(3) #fff, inset 0 0 pxToRem(20) $color, inset 0 0 pxToRem(50) $color, inset 0 0 pxToRem(80) $color
+
+@mixin box-shadow-effect-3($color)
+  box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem $color, 0 0 0.8rem $color, 0 0 2.8rem $color, inset 0 0 1.3rem $color
+
+@mixin box-shadow-effect-4($color, $coefficient: 1)
+  box-shadow: 0 0 pxToRem($coefficient) $color, 0 0 pxToRem(2*$coefficient) $color, 0 0 pxToRem(4*$coefficient) $color
+
+@mixin box-shadow-effect-right($coefficient: 1)
+  box-shadow: rgba(240, 46, 170, 0.4) pxToRem(1*$coefficient) 0px, rgba(240, 46, 170, 0.3) pxToRem(2*$coefficient) 0px, rgba(240, 46, 170, 0.2) pxToRem(3*$coefficient) 0px, rgba(240, 46, 170, 0.1) pxToRem(4*$coefficient) 0px, rgba(240, 46, 170, 0.05) pxToRem(5*$coefficient) 0px
+
+@mixin text-shadow-effect-1($color, $coefficient: 1)
+  text-shadow: 0 0 pxToRem($coefficient) #fff, 0 0 pxToRem(2*$coefficient) #fff, 0 0 pxToRem(3*$coefficient) #fff, 0 0 pxToRem(4*$coefficient) $color, 0 0 pxToRem(7*$coefficient) $color, 0 0 pxToRem(8*$coefficient) $color, 0 0 pxToRem(10*$coefficient) $color, 0 0 pxToRem(15*$coefficient) $color
+
+@mixin text-shadow-effect-2($color, $coefficient: 1)
+  text-shadow: 0 0 pxToRem(1*$coefficient) #fff, 0 0 pxToRem(2*$coefficient) #fff, 0 0 pxToRem(3*$coefficient) #fff, 0 0 pxToRem(4*$coefficient) $color, 0 0 pxToRem(5*$coefficient) $color, 0 0 pxToRem(6*$coefficient) $color, 0 0 pxToRem(7*$coefficient) $color, 0 0 pxToRem(8*$coefficient) $color
+
+@mixin text-shadow-effect-3($color)
+  text-shadow: 0 0 pxToRem(4) #fff,0 0 11px #fff,0 0 pxToRem(19) #fff,0 0 pxToRem(25) $color,0 0 pxToRem(30) $color,0 0 pxToRem(35) $color,pxToRem(20) pxToRem(0) pxToRem(100) white
+
+@mixin custom-bg-1($color)
+  background-color: $color
+  background-image: url('/assets/images/decoration.svg')
+  background-position: bottom center
+  background-repeat: no-repeat
+  background-size: 300%
+
+@mixin custom-bg-2($color, $opacity: 0.21)
+  background-color: rgba($color, $opacity)
+  background-image: repeating-linear-gradient( 30deg, rgba(255, 255, 255, $opacity), rgba(255, 255, 255, $opacity) 20px, rgba($color, $opacity) 20px, rgba($color, $opacity) 40px, rgba(255, 255, 255, $opacity) 40px)
+  background-repeat: repeat
+  background-size: 200% 100%
+  animation: scroll-background 4s infinite linear
+
+@mixin custom-bg-3($color, $opacity: 0.21)
+  background-color: rgba($color, $opacity)
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2))
+  box-shadow: 0 0 pxToRem(4) $color
+  border-width: pxToRem(2)
+  border-style: solid
+  border-color: $color
+  text-shadow: 0 0 pxToRem(4) $color
+
+@mixin btn-neon-effect($text-color, $bg-color)
+  text-shadow: 0 0 1px $text-color, 0 0 2px $text-color, 0 0 4px $text-color, 0 0 8px $text-color
+  background: $bg-color
+  box-shadow: 0 0 2px $bg-color, 0 0 4px $bg-color, 0 0 8px $bg-color, 0 0 16px $bg-color
+
+@keyframes scroll-background
+  0%
+    background-position: 0 0
+  100%
+    background-position: -80px 0
+
+@function pxToRem($value)
+  $remValue: calc($value / 16) + rem
+  @return $remValue

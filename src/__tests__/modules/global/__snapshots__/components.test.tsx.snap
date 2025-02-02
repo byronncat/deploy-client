@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components loader should render the loader correctly 1`] = `
+<div>
+  <div
+    class="flex flex-col justify-center items-center w-full h-full"
+  >
+    <div>
+      <div
+        class="configure-border-1 size-28 p-0.5 bg-white absolute flex justify-center items-center"
+      >
+        <span
+          class="configure-core w-full h-full bg-dark-mode-background"
+        />
+      </div>
+      <div
+        class="configure-border-2 size-28 p-0.5 bg-white rotate-45 flex justify-center items-center"
+      >
+        <span
+          class="configure-core w-full h-full bg-dark-mode-background"
+        />
+      </div>
+    </div>
+    <div
+      class="text-2xl font-bold tracking-widest px-4 py-1 mt-12 rounded bg-cerise-700 shadow-lg shadow-cerise-700/50 waviy"
+    >
+      <span>
+        L
+      </span>
+      <span>
+        O
+      </span>
+      <span>
+        A
+      </span>
+      <span>
+        D
+      </span>
+      <span>
+        I
+      </span>
+      <span>
+        N
+      </span>
+      <span>
+        G
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components overlay should render the overlay correctly 1`] = `
+<div>
+  <div
+    class="position-absolute top-0 start-0 z-1 w-100 h-100 d-flex justify-content-center align-items-center"
+  >
+    <span
+      class="overlay z-n1"
+    />
+    <button
+      aria-label="close"
+      class="button shadow-none btn-close btn-close-white position-absolute top-0 end-0 p-3"
+    />
+    <div>
+      Test
+    </div>
+  </div>
+</div>
+`;

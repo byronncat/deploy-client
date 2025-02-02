@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hoc global should render the global hoc correctly 1`] = `
+<div>
+  Test
+  <div
+    class="Toastify"
+  />
+</div>
+`;

@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components form should render correctly 1`] = `
+<div>
+  <form>
+    <div>
+      <input
+        class=""
+        id="email"
+        name="email"
+        placeholder=" "
+        type="email"
+      />
+      <label
+        class=""
+        for="email"
+      >
+        Email
+      </label>
+    </div>
+    <p
+      class=""
+    />
+    <div>
+      <input
+        class=""
+        id="password"
+        name="password"
+        placeholder=" "
+        type="password"
+      />
+      <label
+        class=""
+        for="password"
+      >
+        Password
+      </label>
+      <span
+        class="flex justify-center items-center absolute top-0 right-0 h-full w-12 text-xl cursor-pointer transition duration-300 opacity-50 hover:opacity-100"
+      >
+        <i
+          class="icon-eye"
+        />
+      </span>
+    </div>
+    <p
+      class=""
+    />
+    <input
+      class="button w-full mt-5"
+      type="submit"
+      value="Login"
+    />
+  </form>
+</div>
+`;
+
+exports[`components should render brand component correctly 1`] = `
+<div>
+  <img
+    alt="logo"
+    class="block"
+    height="60"
+    src="logo.svg"
+    width="60"
+  />
+  <h1
+    class="text-neon-glowing-1 mt-2 mb-6 font-monoton text-3xl tracking-widest -skew-y-6"
+  >
+    bygram
+  </h1>
+</div>
+`;
+
+exports[`components should render divider component correctly 1`] = `
+<div>
+  <p
+    class="text-center my-2"
+  >
+    --- or ---
+  </p>
+</div>
+`;
+
+exports[`components should render navigation button component correctly 1`] = `
+<div>
+  <a
+    class="block font-medium text-center capitalize duration-300 hover:text-slate-300"
+    href="/register"
+  >
+    register
+  </a>
+</div>
+`;

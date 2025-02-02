@@ -1,0 +1,60 @@
+@use '@sass/utilities.sass' as utils
+
+$primary: #d81d84
+$dark-primary: #f242ac
+
+$animation-time: 5.6s
+
+.configure-border-1
+  animation: configure-xclockwise $animation-time ease-in-out 0s infinite
+
+.configure-border-2
+  animation: configure-clockwise $animation-time ease-in-out 0s infinite
+
+.configure-core
+  @include utils.box-shadow-effect-3($primary)
+
+  :global(.dark) &
+    @include utils.box-shadow-effect-3($dark-primary)
+
+@keyframes configure-clockwise
+  0%
+    transform: rotate(0)
+  25%
+    transform: rotate(90deg)
+  50%
+    transform: rotate(180deg)
+  75%
+    transform: rotate(270deg)
+  100%
+    transform: rotate(360deg)
+
+@keyframes configure-xclockwise
+  0%
+    transform: rotate(45deg)
+  25%
+    transform: rotate(-45deg)
+  50%
+    transform: rotate(-135deg)
+  75%
+    transform: rotate(-225deg)
+  100%
+    transform: rotate(-315deg)
+
+.waviy
+  span
+    font-weight: 700
+    letter-spacing: .2rem
+    position: relative
+    display: inline-block
+    animation: waviy calc($animation-time/4) infinite
+    @for $i from 1 through 12
+      &:nth-child(#{$i})
+        animation-delay: calc(.1s * (#{$i}))
+
+@keyframes waviy
+  0%,40%,100%
+    transform: translateY(0)
+
+  20%
+    transform: translateY(-5px)

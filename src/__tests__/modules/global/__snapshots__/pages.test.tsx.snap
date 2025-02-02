@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages should render the 404 page correctly 1`] = `
+<div>
+  <div
+    class="h-screen bg-haiti-950 flex flex-col md:flex-row overflow-hidden"
+  >
+    <div
+      class="w-full md:w-1/2 h-1/2 md:h-full flex place-content-center"
+    >
+      <span
+        class="square flicker-slightly w-36 md:w-1/2 w-36 md:h-full relative -rotate-24 flex justify-center items-center after:content-[\\"\\"] after:block after:w-full after:pb-full after:absolute after:rounded-2xl"
+      >
+        <p
+          class="relative z-10 font-bold text-10vw text-haiti-950 drop-shadow-xl select-none"
+        >
+          404
+        </p>
+      </span>
+    </div>
+    <div
+      class="w-full md:w-1/2 p-8 md:p-4 relative z-20 flex place-content-center flex-col"
+    >
+      <h4
+        class="font-semibold text-lg"
+      >
+        Oops! Page not found.
+      </h4>
+      <p
+        class="pt-3 pb-5"
+      >
+        The page you are looking for does not exist. Go back to the main page.
+      </p>
+      <a
+        class="button self-center md:self-start"
+        href="/"
+      >
+        Back to Home
+      </a>
+    </div>
+  </div>
+</div>
+`;

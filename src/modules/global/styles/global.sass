@@ -1,0 +1,51 @@
+@use './fonts.sass'
+@use '@sass/utilities.sass' as util
+
+// Settings
+$global-font-family: 'Montserrat'
+
+// FF, IE7+, chrome (except button) & // chromes and blink button
+input[type=file], input[type=file]::-webkit-file-upload-button
+  cursor: pointer
+
+ul, button, p
+  padding: 0
+  margin: 0
+
+ul
+  list-style: none
+
+a
+  text-decoration: none
+  color: inherit
+
+html, body, #root
+  font-family: $global-font-family
+  box-sizing: border-box
+
+/* ===== Scrollbar CSS ===== */
+$scrollbar-width: util.pxToRem(4)
+$scrollbar-radius: util.pxToRem(2)
+$scrollbar-thumb-color: #d81d84
+
+*
+  scrollbar-width: thin
+  scrollbar-color: $scrollbar-thumb-color transparent
+
+/* Chrome, Edge, and Safari */
+::-webkit-scrollbar
+  width: $scrollbar-width
+  background-color: $scrollbar-thumb-color
+::-webkit-scrollbar-track
+  border-radius: $scrollbar-radius
+  background-color: transparent
+::-webkit-scrollbar-thumb
+  border-radius: $scrollbar-radius
+  background-color: $scrollbar-thumb-color
+
+.LazyLoad
+  opacity: 0
+  transition: all 1s ease-in-out
+
+.is-visible
+  opacity: 1

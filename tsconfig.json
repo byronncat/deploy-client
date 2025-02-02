@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es2015",
+
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": false,
+    "noImplicitAny": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "strict": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+
+    "allowJs": true,
+    "checkJs": true,
+
+    "skipLibCheck": true,
+
+    "noEmit": true,
+
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+
+    "module": "esnext",
+    "moduleResolution": "node",
+    "types": ["node", "jest"],
+    "resolveJsonModule": true,
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@route": ["src/route/index.ts"],
+      "@authentication": ["src/modules/authentication/index.ts"],
+      "@global": ["src/modules/global/index.ts"],
+      "@core": ["src/modules/core/index.ts"],
+      "@sass/*": ["src/modules/sass/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["setupProxy.js", "setupTests.ts"]
+}
