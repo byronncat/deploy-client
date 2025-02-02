@@ -1,7 +1,7 @@
 import type { LoginFormData, RegisterFormData } from '../types';
 
 const LOGIN_FORM = {
-  identity: 'test@bygram.com',
+  identity: 'test@gmail.com',
   password: '1234567',
 } as LoginFormData;
 
