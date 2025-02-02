@@ -1,4 +1,4 @@
-import { useState, createContext, useCallback, useLayoutEffect } from 'react';
+import { useState, createContext, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useJwt } from 'react-jwt';
 import Cookies from 'js-cookie';
@@ -36,11 +36,12 @@ export default function Authentication({ children }: PropsWithChildren) {
     navigate(ROUTE.LOGIN);
   }, [navigate]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (decodedToken) {
       setUser(decodedToken);
     }
   }, [decodedToken]);
+  console.log(user, userCookie);
 
   return (
     <AuthContext.Provider

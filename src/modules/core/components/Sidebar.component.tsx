@@ -37,7 +37,7 @@ const Sidebar = () => {
   const [showSearch, toggleShowSearch] = useToggle(false);
   const [showCreateWindow, toggleCreateWindow] = useToggle(false);
 
-  if (!user) return null;
+  // if (!user) return null;
 
   function toggleSearchHandler() {
     toggleIsMinimize();
