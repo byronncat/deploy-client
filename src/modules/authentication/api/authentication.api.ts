@@ -7,14 +7,14 @@ import type { LoginFormData, RegisterFormData } from '../types';
 
 export async function login(data: LoginFormData): Promise<API> {
   return await axios
-    .post(uri.getHostingServer('login'), data)
+    .post(uri.getHostingServer('login'), data, { withCredentials: true })
     .then((res: AxiosResponse) => res.data)
     .catch((error) => error.response.data);
 }
 
 export async function register(data: RegisterFormData): Promise<API> {
   return await axios
-    .post(uri.getHostingServer('register'), data)
+    .post(uri.getHostingServer('register'), data, { withCredentials: true })
     .then((res: AxiosResponse) => res.data)
     .catch((error) => error.response.data);
 }
@@ -28,7 +28,7 @@ export async function logout(): Promise<API> {
 
 export async function authenticate(): Promise<API> {
   return await axios
-    .get(uri.getHostingServer('authenticate'))
+    .get(uri.getHostingServer('authenticate'), { withCredentials: true })
     .then((res: AxiosResponse) => res.data)
     .catch((error) => error.response.data);
 }
