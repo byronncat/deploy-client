@@ -29,7 +29,7 @@ export default function LoginPage() {
     const response = await authenticationApi.login(data);
     loading.end();
     if (response.success) {
-      login();
+      login(response.data);
       navigate(ROUTE.HOME);
       toast.success(response.message);
     } else {

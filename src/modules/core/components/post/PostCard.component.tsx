@@ -152,7 +152,7 @@ export default function PostCard({ id }: PostCardProps) {
         key={post.id}
       >
         <header className={clsx('flex', 'p-4 pb-0', 'relative')}>
-          <Avatar image={post.avatar} />
+          <Link to={`/profile/${post.username}`}><Avatar image={post.avatar} /></Link>
           <div className={clsx('ml-3', 'flex items-center')}>
             <Link
               className={clsx('block', 'font-semibold text-lg')}
@@ -163,7 +163,7 @@ export default function PostCard({ id }: PostCardProps) {
             <span className="mx-2 text-2xl">&middot;</span>
             <span
               className={clsx(
-                'block',
+                'block select-none',
                 'opacity-70',
                 'text-on-surface dark:text-dark-on-surface',
               )}
@@ -173,7 +173,7 @@ export default function PostCard({ id }: PostCardProps) {
           </div>
 
           <button
-            className={clsx('p-3', 'absolute top-4 right-4')}
+            className={clsx('p-3', 'absolute top-4 right-4', 'hover:opacity-70 transition-opacity duration-200')}
             onClick={toggleMenu}
             aria-label="post-menu"
           >

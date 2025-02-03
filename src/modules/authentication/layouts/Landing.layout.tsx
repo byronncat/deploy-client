@@ -14,7 +14,7 @@ export default function Landing({ title, children }: LandingProps) {
     <div className={clsx('w-screen h-svh', 'overflow-hidden select-none')}>
       <SubBackground />
       <div className={clsx('w-full xl:w-3/5 h-full', 'relative float-right')}>
-        <Header />
+        <Header brandHyperlink={false} />
         <div
           className={clsx(
             'flex flex-col justify-center items-center',

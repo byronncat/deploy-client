@@ -186,7 +186,7 @@ export default function PostDetails({ onExit }: PostDetailsProps) {
                 </p>
               </Link>
 
-              <button
+              {user?.id === currentPost.uid && <button
                 className={clsx(
                   'p-2',
                   'hover:opacity-70 transition-opacity duration-300',
@@ -199,7 +199,7 @@ export default function PostDetails({ onExit }: PostDetailsProps) {
                     'fill-on-surface/[0.87] dark:fill-dark-on-surface/[0.87]',
                   )}
                 />
-              </button>
+              </button>}
             </div>
 
             <Divider />

@@ -71,7 +71,7 @@ export default function Carousel() {
                     )}
                     autoPlay
                     loop
-                    muted
+                    // muted
                     playsInline
                   />
                 ) : (

@@ -13,7 +13,9 @@ function Authentication() {
     (async function authenticate() {
       setLoading(true);
       const response = await authenticationApi.authenticate();
-      if (response.success) login();
+      if (response.success) {
+        login(response.data);
+      };
       setLoading(false);
     })();
   }, [login]);

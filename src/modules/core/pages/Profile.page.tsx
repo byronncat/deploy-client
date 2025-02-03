@@ -32,7 +32,7 @@ export default function ProfilePage() {
 
   async function followHandler() {
     if (!profile) return;
-    const response = await profileApi.follow(profile.id);
+    const response = await profileApi.follow(profile._id);
     if (response.success)
       setProfile((prev) => {
         if (!prev) return prev;
@@ -46,7 +46,7 @@ export default function ProfilePage() {
 
   async function unfollowHandler() {
     if (!profile) return;
-    const response = await profileApi.unfollow(profile.id);
+    const response = await profileApi.unfollow(profile._id);
     if (response.success)
       setProfile((prev) => {
         if (!prev) return prev;
@@ -176,13 +176,6 @@ export default function ProfilePage() {
   if (!isLoaded) return <Loader.BoxSpin />;
   return (
     <>
-      {/* {showCurrentPost && (
-        <PostWindow
-          post={currentPost}
-          onExit={() => setShowCurrentPost(false)}
-        />
-      )} */}
-      
       {showAvatarMenu && (
         <Overlay onExit={toggleAvatarMenu}>
           <Menu
@@ -234,7 +227,7 @@ export default function ProfilePage() {
             )}
           >
             <Avatar size={'medium'} image={profile?.avatar} />
-            {profile && user?.id === profile?.id && (
+            {profile && user?.id === profile?._id && (
               <input
                 type="file"
                 className={clsx(
@@ -263,7 +256,7 @@ export default function ProfilePage() {
           <div className={clsx('flex flex-col', 'gap-y-3 md:gap-y-4')}>
             <div className={clsx('flex items-center', 'gap-x-6')}>
               <h2 className="text-2xl font-semibold">{profile?.username}</h2>
-              {profile && user?.id !== profile?.id && (
+              {profile && user?.id !== profile?._id && (
                 <button
                   className={clsx(
                     'px-3 md:px-2 py-1',

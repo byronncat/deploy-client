@@ -10,3 +10,5 @@ export type RegisterFormData = {
   username: User['username'];
   password: User['password'];
 };
+
+export type UserToken =  Pick<User, 'id' | 'username' | 'email'>;

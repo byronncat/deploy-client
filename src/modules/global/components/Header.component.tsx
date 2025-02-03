@@ -6,9 +6,10 @@ import { useCallback, useEffect, useState } from 'react';
 
 type HeaderProps = {
   loginShown?: boolean;
+  brandHyperlink?: boolean;
 };
 
-export default function Header({ loginShown }: HeaderProps) {
+export default function Header({ loginShown, brandHyperlink }: HeaderProps) {
   const [isShown, setShown] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -37,7 +38,7 @@ export default function Header({ loginShown }: HeaderProps) {
         'transition-transform duration-300',
       )}
     >
-      <Brand />
+      <Brand hyperlink={brandHyperlink} />
       <div className="flex items-center">
         <ThemeSelection />
         {loginShown && (
@@ -73,9 +74,13 @@ export default function Header({ loginShown }: HeaderProps) {
   );
 }
 
-function Brand() {
-  return (
-    <Link to="/" className={clsx('flex items-center', 'w-fit')}>
+type BrandProps = {
+  hyperlink?: boolean;
+};
+
+function Brand({ hyperlink }: BrandProps) {
+  const Content = () => (
+    <>
       <img src={logoURL} className="size-10" alt="logo" />
       <span
         className={clsx(
@@ -86,6 +91,13 @@ function Brand() {
       >
         bygram
       </span>
+    </>
+  )
+
+  if (!hyperlink) return <div className={clsx('flex items-center', 'w-fit')}><Content /></div>;
+  return (
+    <Link to="/" className={clsx('flex items-center', 'w-fit')}>
+      <Content />
     </Link>
   );
 }

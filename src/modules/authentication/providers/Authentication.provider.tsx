@@ -1,52 +1,41 @@
-import { useState, createContext, useCallback, useEffect } from 'react';
+import { useState, createContext, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useJwt } from 'react-jwt';
-import Cookies from 'js-cookie';
 import { ROUTE } from '@route';
 
 import type { PropsWithChildren } from 'react';
-import type { User } from '@global';
+import type { UserToken } from '../types';
 
 export const AuthContext = createContext(
   {} as {
     isLoggedIn: boolean;
-    login: () => void;
+    login: (user: UserToken) => void;
     logout: () => void;
     user: UserToken | null;
+    setUser: (user: UserToken) => void;
   },
 );
 
-interface UserToken extends Omit<User, 'password'> {
-  iat: number;
-}
-
 export default function Authentication({ children }: PropsWithChildren) {
-  const userCookie = Cookies.get('user');
   const navigate = useNavigate();
-  const { decodedToken } = useJwt<UserToken>(userCookie || '');
-  const [user, setUser] = useState<UserToken | null>(decodedToken);
+  const [user, setUser] = useState<UserToken | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const login = useCallback(() => {
+  const login = useCallback((user: UserToken) => {
     setIsLoggedIn(true);
+    setUser(user);
   }, []);
 
   const logout = useCallback(() => {
+    setUser(null);
     setIsLoggedIn(false);
     navigate(ROUTE.LOGIN);
   }, [navigate]);
-
-  useEffect(() => {
-    if (decodedToken) {
-      setUser(decodedToken);
-    }
-  }, [decodedToken]);
-  console.log(user, userCookie);
 
   return (
     <AuthContext.Provider
       value={{
         user,
+        setUser,
         isLoggedIn,
         login,
         logout,

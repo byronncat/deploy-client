@@ -30,7 +30,7 @@ const Register = () => {
     const response = await authenticationApi.register(data);
     loading.end();
     if (response.success) {
-      login();
+      login(response.data);
       navigate(ROUTE.HOME);
       toast.success(response.message);
     } else {
